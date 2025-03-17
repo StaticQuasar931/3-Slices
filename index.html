@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Page with QR Code</title>
+    <title>Play 3 Slices - More Games Available!</title>
     <style>
         * {
             margin: 0;
@@ -15,6 +15,7 @@
             height: 100%;
             overflow: hidden;
             font-family: Arial, sans-serif;
+            background: #f4f4f4;
         }
         .container {
             position: relative;
@@ -33,18 +34,20 @@
         .overlay {
             position: absolute;
             top: 10px;
-            left: 10px;
+            left: 50%;
+            transform: translateX(-50%);
             background: white;
             color: black;
-            padding: 15px;
+            padding: 15px 20px;
             border-radius: 10px;
             z-index: 2;
-            font-size: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
         .overlay a {
-            color: black;
+            color: #007bff;
             text-decoration: none;
-            font-weight: bold;
         }
         .overlay a:hover {
             text-decoration: underline;
@@ -58,24 +61,27 @@
             border-radius: 10px;
             text-align: center;
             z-index: 2;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
         .qr-container img {
-            width: 200px;
+            width: 220px;
         }
         .link-container {
             position: absolute;
             bottom: 10px;
-            left: 10px;
+            left: 50%;
+            transform: translateX(-50%);
             background: white;
-            padding: 15px;
+            padding: 15px 20px;
             border-radius: 10px;
             z-index: 2;
-            font-size: 24px;
+            font-size: 26px;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
         .link-container a {
-            color: black;
+            color: #007bff;
             text-decoration: none;
-            font-weight: bold;
         }
         .link-container a:hover {
             text-decoration: underline;
@@ -87,18 +93,18 @@
         <iframe src="https://script.google.com/macros/s/AKfycbwc8tQNjhcp1UvhLlIm2xn0eWosHu36CInDe9hXwDc__kbXB1GwneLwGSlGLMx2hxAE/exec" allow="fullscreen" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin"></iframe>
         
         <div class="overlay">
-            <h2><a href="https://sites.google.com/view/staticquasar931/home" target="_blank">Check Out More Games</a></h2>
+            <h2><a href="https://sites.google.com/view/staticquasar931/home" target="_blank">🔥 More Games Available - Click Here! 🔥</a></h2>
         </div>
         
         <div class="qr-container">
-            <p>Scan to visit my site:</p>
+            <p>Scan to Play More Games:</p>
             <a href="https://sites.google.com/view/staticquasar931/home" target="_blank">
                 <img src="https://res.cloudinary.com/dcsrqennd/image/upload/v1733694622/frame_1_vmv9y3.png" alt="QR Code to StaticQuasar931">
             </a>
         </div>
         
         <div class="link-container">
-            <p>Visit my website: <a href="https://sites.google.com/view/staticquasar931/home" target="_blank">StaticQuasar931</a></p>
+            <p><a href="https://sites.google.com/view/staticquasar931/home" target="_blank">Visit StaticQuasar931 🎮</a></p>
         </div>
     </div>
 </body>
