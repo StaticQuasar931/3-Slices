@@ -52,6 +52,18 @@
         .overlay a:hover {
             text-decoration: underline;
         }
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
         .qr-container {
             position: absolute;
             bottom: 20px;
@@ -66,31 +78,6 @@
         .qr-container img {
             width: 220px;
         }
-        .link-container {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            padding: 15px 20px;
-            border-radius: 10px;
-            z-index: 2;
-            font-size: 26px;
-            font-weight: bold;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.5s ease-in-out, opacity 0.5s;
-        }
-        .link-container a {
-            color: #ff5733;
-            text-decoration: none;
-        }
-        .link-container a:hover {
-            text-decoration: underline;
-        }
-        .link-container.hidden {
-            opacity: 0;
-            transform: scale(0);
-        }
         .creator {
             position: absolute;
             top: 10px;
@@ -101,38 +88,25 @@
             padding: 10px 15px;
             border-radius: 10px;
             z-index: 2;
+            text-align: center;
+        }
+        .creator span {
+            font-weight: bold;
+            display: inline-block;
+        }
+        .rainbow-text span {
+            font-weight: bold;
+            display: inline-block;
         }
     </style>
     <script>
-        function toggleLinkContainer() {
-            let linkContainer = document.querySelector('.link-container');
+        function toggleOverlay() {
+            let overlay = document.querySelector('.overlay');
+            overlay.style.display = 'none';
             setTimeout(() => {
-                linkContainer.classList.remove('hidden');
-                setTimeout(() => {
-                    linkContainer.classList.add('hidden');
-                    linkContainer.style.bottom = 'auto';
-                    linkContainer.style.top = '10px';
-                    linkContainer.style.left = '10px';
-                    linkContainer.style.transform = 'none';
-                }, 10000);
-            }, 10000);
-
-            setInterval(() => {
-                linkContainer.style.bottom = '20px';
-                linkContainer.style.top = 'auto';
-                linkContainer.style.left = '50%';
-                linkContainer.style.transform = 'translateX(-50%)';
-                linkContainer.classList.remove('hidden');
-                setTimeout(() => {
-                    linkContainer.classList.add('hidden');
-                    linkContainer.style.bottom = 'auto';
-                    linkContainer.style.top = '10px';
-                    linkContainer.style.left = '10px';
-                    linkContainer.style.transform = 'none';
-                }, 10000);
+                overlay.style.display = 'block';
             }, 120000);
         }
-        window.onload = toggleLinkContainer;
     </script>
 </head>
 <body>
@@ -140,6 +114,7 @@
         <iframe src="https://script.google.com/macros/s/AKfycbwc8tQNjhcp1UvhLlIm2xn0eWosHu36CInDe9hXwDc__kbXB1GwneLwGSlGLMx2hxAE/exec" allow="fullscreen" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin"></iframe>
         
         <div class="overlay">
+            <button class="close-btn" onclick="toggleOverlay()">-</button>
             <h2><a href="https://sites.google.com/view/staticquasar931/home" target="_blank">🔥 More Games Available - Click Here! 🔥</a></h2>
             <p>🚀 Weekly/Daily Updates - New Games Almost Every Day! 🎮</p>
         </div>
@@ -151,13 +126,37 @@
             </a>
         </div>
         
-        <div class="link-container">
-            <p><a href="https://sites.google.com/view/staticquasar931/home" target="_blank">Visit StaticQuasar931 🎮</a></p>
-        </div>
-        
         <div class="creator">
             <p>
-                <span class="rainbow-text">Made by Gaz Thomas | Implemented by <a href="https://sites.google.com/view/staticquasar931/home" style="text-decoration: none;">Static</a></span>
+                <span class="rainbow-text">
+                    <span style="color: red;">M</span>
+                    <span style="color: orange;">a</span>
+                    <span style="color: yellow;">d</span>
+                    <span style="color: green;">e</span>
+                    <span style="color: blue;"> </span>
+                    <span style="color: purple;">b</span>
+                    <span style="color: cyan;">y</span>
+                    <span> </span>
+                    <span style="color: red;">G</span>
+                    <span style="color: orange;">a</span>
+                    <span style="color: yellow;">z</span>
+                    <span> </span>
+                    <span style="color: green;">T</span>
+                    <span style="color: blue;">h</span>
+                    <span style="color: purple;">o</span>
+                    <span style="color: cyan;">m</span>
+                    <span style="color: red;">a</span>
+                    <span style="color: orange;">s</span>
+                    <span> | </span>
+                    <a href="https://sites.google.com/view/staticquasar931/home" style="text-decoration: none;">
+                        <span style="color: red;">S</span>
+                        <span style="color: orange;">t</span>
+                        <span style="color: yellow;">a</span>
+                        <span style="color: green;">t</span>
+                        <span style="color: blue;">i</span>
+                        <span style="color: purple;">c</span>
+                    </a>
+                </span>
             </p>
         </div>
     </div>
