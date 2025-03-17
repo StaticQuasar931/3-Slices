@@ -91,6 +91,10 @@
             text-align: center;
             animation: rainbow 3s infinite linear;
         }
+        .creator a {
+            animation: rainbow 3s infinite linear;
+            text-decoration: none;
+        }
         @keyframes rainbow {
             0% { color: red; }
             20% { color: orange; }
@@ -98,10 +102,6 @@
             60% { color: green; }
             80% { color: blue; }
             100% { color: purple; }
-        }
-        .creator a {
-            animation: rainbow 3s infinite linear;
-            text-decoration: none;
         }
         .link-container {
             position: absolute;
@@ -116,6 +116,7 @@
             font-weight: bold;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.5s ease-in-out, opacity 0.5s;
+            display: none;
         }
     </style>
     <script>
@@ -128,16 +129,26 @@
         }
         function toggleLinkContainer() {
             let linkContainer = document.querySelector('.link-container');
+            linkContainer.style.display = 'block';
             setTimeout(() => {
-                linkContainer.classList.remove('hidden');
+                linkContainer.style.bottom = 'auto';
+                linkContainer.style.top = '10px';
+                linkContainer.style.left = '10px';
+                linkContainer.style.transform = 'none';
+            }, 10000);
+            setInterval(() => {
+                linkContainer.style.display = 'block';
+                linkContainer.style.bottom = '20px';
+                linkContainer.style.top = 'auto';
+                linkContainer.style.left = '50%';
+                linkContainer.style.transform = 'translateX(-50%)';
                 setTimeout(() => {
-                    linkContainer.classList.add('hidden');
                     linkContainer.style.bottom = 'auto';
                     linkContainer.style.top = '10px';
                     linkContainer.style.left = '10px';
                     linkContainer.style.transform = 'none';
                 }, 10000);
-            }, 10000);
+            }, 120000);
         }
         window.onload = toggleLinkContainer;
     </script>
@@ -163,6 +174,10 @@
             <p>Made by Gaz Thomas<br>
                 <a href="https://sites.google.com/view/staticquasar931/home">Implemented by Static</a>
             </p>
+        </div>
+        
+        <div class="link-container">
+            <p><a href="https://sites.google.com/view/staticquasar931/home" target="_blank">Visit StaticQuasar931 🎮</a></p>
         </div>
     </div>
 </body>
