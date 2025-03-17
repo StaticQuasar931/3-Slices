@@ -39,6 +39,14 @@
             padding: 15px;
             border-radius: 10px;
             z-index: 2;
+            font-size: 20px;
+        }
+        .overlay a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        .overlay a:hover {
+            text-decoration: underline;
         }
         .qr-container {
             position: absolute;
@@ -51,7 +59,7 @@
             z-index: 2;
         }
         .qr-container img {
-            width: 150px;
+            width: 180px;
         }
         .link-container {
             position: absolute;
@@ -61,22 +69,24 @@
             padding: 10px;
             border-radius: 10px;
             z-index: 2;
+            font-size: 22px;
         }
-        .link-container a, .overlay a {
+        .link-container a {
             color: #FFD700;
             text-decoration: none;
+            font-weight: bold;
         }
-        .link-container a:hover, .overlay a:hover {
+        .link-container a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <iframe src="https://script.google.com/macros/s/AKfycbwc8tQNjhcp1UvhLlIm2xn0eWosHu36CInDe9hXwDc__kbXB1GwneLwGSlGLMx2hxAE/exec" allowfullscreen></iframe>
+        <iframe src="https://script.google.com/macros/s/AKfycbwc8tQNjhcp1UvhLlIm2xn0eWosHu36CInDe9hXwDc__kbXB1GwneLwGSlGLMx2hxAE/exec" allow="fullscreen" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin"></iframe>
         
         <div class="overlay">
-            <h2>Check Out This Page</h2>
+            <h2><a href="https://sites.google.com/view/staticquasar931/home" target="_blank">Check Out More Games</a></h2>
         </div>
         
         <div class="qr-container">
